@@ -1,0 +1,63 @@
+<div class="container">
+    <canvas id="myChart"></canvas>
+    <br/>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.js'></script>
+<script>
+    let myChart = document.getElementById('myChart').getContext('2d');
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#d7ba7d'
+
+    let massPopChart = new Chart(myChart, {
+        type: 'pie', //bar, horizontalbar, pie,doughnut,radar,polarArea
+        data: {
+            labels: ['Toronto', 'Montreal', 'Vancouver', 'Ottawa', 'Calgary'],
+            datasets: [{
+                label: 'Population',
+                data: [
+                    5583064,
+                    3824221,
+                    2313328,
+                    1236324,
+                    1214839,
+                ],
+                //backgroundColor:'Black'
+                backgroundColor: [
+                    'blue',
+                    'red',
+                    'teal',
+                    'black',
+                    'green'
+                ],
+                borderWidth: 1,
+                borderColor: 'yellow',
+                hoverBorderWidth: 3,
+                hoverBorderColor: 'black'
+            }],
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'GraphJS City Population for Canada',
+                fontSize: 25,
+                legend: {
+                    display: false,
+                    position: 'right',
+                    labels: {
+                        fontColor: 'black'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+
+            },
+        }
+    });
+</script>

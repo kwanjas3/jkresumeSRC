@@ -1,0 +1,197 @@
+<div class="row">
+	<div class="main">
+		<article>
+			<h2>Background</h2>
+			<p>Jason is a driven and resourceful student programmer with experience in full stack programming and is looking to obtain
+				a position related to Software Development. Jason’s previous experience has given him well-rounded team-work skills and
+				his ability to handle stressful situations will give him the edge when situated in an AGILE environment.</p>
+			<h2>Experience</h2>
+			<ol>
+				<li>
+					<b>Feb 10th 2018</b>
+					<br>
+					• <a href="https://github.com/kwanjas3/hackernest">Webapp/Android Development for Small/Medium Fish-Farmers</a>
+					<br>
+					• <a href="http://fishackathon.hackernest.com/">fishhackathon.hackernest.com</a>
+					<br>
+					• <a href="https://stormy-atoll-53002.herokuapp.com">Deployment</a> herokuapps sleep after being inactive for 30 minutes, please wait 5 seconds for the backend to bootup
+					<br>
+					• <a href="https://pr.to/RM4QKX/">Android Prototype</a>
+					<br> • To facilitate better access to information on alternative fish feeds that will have a positive environmental and
+					financial impact.
+					<br>
+				</li>
+				<li>
+					<b>Jan 2018 - Apr 2018</b>
+					<br>
+					• <a href="http://www.senecacollege.ca/programs/fulltime/CPA.html">Junior Programmer @ Seneca Markham </a>
+					<br>
+					<article data-html="true">
+						• Assisting the development lead, I develop, test and support applications
+						<br> • Participates in code review, follows defined documentation policies, standards and procedures
+						<br> • Implemented JSP servlets as middleware to parse params
+						<br> • Modified Microsoft ReactJS compiled script to work on local domain
+						<br> • Intercepted existing ajax call to reroute to proxy to workaround CORS/XXS
+						<br> • Implemented workaround for form injection without access to ReactJS sourcecode
+						<br>bypassing empty field defaultstate.
+						<br> • Refactor code to restructure jsp page for email confirmation
+						<br> • Created HTML5 Canvasses for animations interacting with mouse position
+						<br> • Created Frontend <a href="https://kwanjas3.github.io/reactjsbuild">ReactJS</a> webapp to render email groups from api fetch call
+						<br> • Created jkresume.herokuapp.com/testapi to send string JSON response for fetch calls
+						<br> • Created jkresume.herokuapp.com/testapi2 to send XML response for fetch calls
+					
+						
+					</article>
+				</li>
+				<li>
+					<b>Sept 2015 - Current</b>
+					<br>
+					• <a href="http://www.notabilia.ca/">Tutor, Admin, Notabilia</a>
+					<br> • Tutored math and science for students of various grades and levels
+					<br> • Taught a grade 3 student how to implement simple C programs
+					<br> • Scouted potential tutors through job invitations and university job portals
+					<br> • Book-keeping duties
+					<br> • Interviewed potential candidates for tutoring positions
+
+				</li>
+				<li>
+					<b>Aug 2005 - Dec 2016</b>
+					<br>
+					• <a href="http://www.sammychengtorontoliondance.com/">Martial Arts Instructor / Event Performer, Sammy Cheng CLK </a>
+					<br> • Volunteered to teach Martial Arts on Friday evenings, Sunday mornings
+					<br> • Volunteered to teach Chinese Lion Dance Friday evenings
+					<br> • Performed at events with various VIPs such as
+					<a href="https://youtu.be/BaQ4GQtZKPs?t=48">Justin Trudeau</a> and
+					<a href="http://www.sammychengtorontoliondance.com/Camera%20Pictures%20417.JPG">Stephen Harper</a>
+					<br>
+
+				</li>
+
+				<br>
+			</ol>
+		</article>
+		</section>
+
+	</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<h3>Leave a Comment</h3>
+			<div class="well">
+				<div class="row">
+					<div class="col-md-12">
+						<form method="post" action="/about/addComment">
+							<div class="well">
+								<div class="row">
+									<div class="col-md-6">
+										<input type="text" class="form-control" placeholder="Name" name="authorName" />
+										<br />
+									</div>
+									<div class="col-md-6">
+										<input type="email" class="form-control" placeholder="Email" name="authorEmail" />
+										<br />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<input type="text" class="form-control" placeholder="Subject" name="subject" />
+										<br />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<textarea class="form-control" rows="8" placeholder="Comment" name="commentText"></textarea>
+										<br />
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-2 col-md-offset-10">
+										<button type="submit" class="btn btn-primary form-control">Comment</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			{{#if data}}
+			<div class="row">
+				<div class="col-md-12">
+					<h3>Vistor's Log</h3>
+					<hr />
+				</div>
+			</div>
+			{{/if}} {{#each data}}
+			<strong>{{subject}}</strong>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="well">
+						<div class="row">
+							<div class="col-md-12">
+								{{commentText}}
+								<br />
+								<br /> Posted on: {{postedDate}} by
+								<a href="mailto:{{authorEmail}}">{{authorName}}</a>
+								<br />
+								<br />
+							</div>
+						</div>
+						{{!-- inside each replies, display this comment --}} {{#each replies}}
+						<div class="row">
+							<div class="col-md-12">
+								<div class="well">{{commentText}}
+									<br />
+									<br /> Posted on: {{repliedDate}} by
+									<a href="mailto:{{authorEmail}}">{{authorName}}</a>
+									<br />
+									<br />
+								</div>
+							</div>
+						</div>
+						{{/each}}
+						<div class="row">
+							<div class="col-md-12">
+								<button class="btn btn-primary btn-sm pull-right" data-toggle="collapse" data-target="#reply-{{_id}}" aria-expanded="false">Reply</button>
+							</div>
+						</div>
+					</div>
+					<div class="collapse" id="reply-{{_id}}">
+						<div class="well">
+							<div class="row">
+								<div class="col-md-12">
+									{{!-- REPLY FORM --}}
+									<form method="post" action="/about/addReply">
+										<div class="row">
+											<div class="col-md-6">
+												<input class="form-control" placeholder="Name" name="authorName" type="text">
+												<br>
+											</div>
+											<div class="col-md-6">
+												<input class="form-control" placeholder="Email" name="authorEmail" type="email">
+												<br>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<textarea class="form-control" rows="8" placeholder="Comment" name="commentText"></textarea>
+												<br>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-2 col-md-offset-10">
+												<input value="{{_id}}" name="_id" type="hidden">
+												<input value="{{_id}}" name="comment_id" type="hidden">
+												<button type="submit" class="btn btn-primary form-control">Submit Reply</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</div>
+	</div>

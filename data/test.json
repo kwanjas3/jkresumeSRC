@@ -1,0 +1,148 @@
+[
+    {
+        "category": "Admin",
+        "type": "FT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "Employee.Helpdesk",
+            "update"
+        ],
+        "group_name": "Admin.fulltime",
+        "objectID": 0
+    },
+    {
+        "category": "Admin",
+        "type": "PT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4",
+            "Employee.Helpdesk",
+            "update"
+        ],
+        "group_name": "Admin.parttime",
+        "objectID": 1
+    },
+    {
+        "category": "Staff",
+        "type": "PT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Staff.parttime",
+        "objectID": 2
+    },
+    {
+        "category": "Staff",
+        "type": "FT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test1",
+            "test2"
+        ],
+        "group_name": "Staff.fulltime",
+        "objectID": 3
+    },
+    {
+        "category": "Staff",
+        "type": "PTU",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Staff.parttimeunion",
+        "objectID": 4
+    },
+    {
+        "category": "Faculty",
+        "type": "FT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Faculty.fulltime",
+        "objectID": 5
+    },
+    {
+        "category": "Faculty",
+        "type": "PT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Faculty.parttime",
+        "objectID": 6
+    },
+    {
+        "category": "Faculty",
+        "type": "PT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Faculty.parttime",
+        "objectID": 7
+    },
+    {
+        "category": "Faculty",
+        "type": "PL",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Faculty.partialload",
+        "objectID": 8
+    },
+    {
+        "category": "Faculty",
+        "type": "PTNU",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Faculty.parttimenonunion",
+        "objectID": 9
+    },
+    {
+        "category": "Other",
+        "type": "OT",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Other.Dean",
+        "objectID": 10
+    },
+    {
+        "category": "Other",
+        "type": "OTCW",
+        "campus": "NH",
+        "description": "Some descriptionription 1",
+        "sender_list": [
+            "test3",
+            "test4"
+        ],
+        "group_name": "Contingent.Worker",
+        "objectID": 11
+    }
+]
